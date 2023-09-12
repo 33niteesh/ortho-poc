@@ -48,7 +48,7 @@ function App(props) {
   }
   const getDatafrom=()=>{
     const table = [
-         {
+      {
         "id":1,
         "first_name":"Arjun",
         "SIZE":"S",
@@ -106,7 +106,6 @@ function App(props) {
     }
     ]
     setData(table);
-  };
   }
   useEffect(()=>{
     getDatafrom();

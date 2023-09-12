@@ -31,5 +31,28 @@
         "first_name":"Raju",
         "SIZE":"M",
         "last_name":"Singh"
+    },
+    {
+        "id":7,
+        "first_name":"Vickey",
+        "SIZE":"S",
+        "last_name":"Mudiraj"
+    },
+    {
+        "id":8,
+        "first_name":"Sai Kumar",
+        "SIZE":"L",
+        "last_name":"Naidu"
+    },
+    {
+        "id":9,
+        "first_name":"Madhu",
+        "SIZE":"M",
+        "last_name":"Roy"
+    },{
+        "id":10,
+        "first_name":"Jaishwal",
+        "SIZE":"L",
+        "last_name":"Harith"
     }
 ]}

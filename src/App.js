@@ -47,7 +47,7 @@ function App(props) {
      setPopup(false)
   }
   const getDatafrom=()=>{
-    var table = [
+    const table = [
          {
         "id":1,
         "first_name":"Arjun",

@@ -16,7 +16,8 @@ table {
   z-index:999;
   width:300px;
   height:300px;
-  margin-top:20px ;
+  border-radius: 5px;
+  margin-top:-135px ;
   margin-left:350px;
   background:rgba(255, 255, 255, 1);
   position:fixed;
@@ -32,7 +33,7 @@ p{
 th{
   background:rgba(255, 0, 0, 0.735);
   padding: 0 40px ;
-  color:white;
+  color:rgb(255, 255, 255);
   height:40px;
 }
 
@@ -47,7 +48,7 @@ th{
 td{
   padding:10px 50px;
   margin:0px  ;
-  color:white 
+  color:rgba(255, 3, 3, 0.71) 
 }
 .sort{
   display:flex;

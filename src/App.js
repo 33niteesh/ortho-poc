@@ -46,8 +46,11 @@ function App(props) {
      setData(common); 
      setPopup(false)
   }
-  useEffect(()=>{
+  const getDatafrom=()=>{
     axios.get("http://localhost:3001/data").then(e=>setData(e.data));
+  }
+  useEffect(()=>{
+    getDatafrom();
   },[])
   const sortbyId=()=>{
     props.SortId()
@@ -74,12 +77,16 @@ function App(props) {
     setData(props.data)
   }
   const closefilter=()=>{
-    axios.get("http://localhost:3001/data").then(e=>setData(e.data));
+    getDatafrom();
     setPopup(false);
+  }
+  const show=()=>{
+    getDatafrom();
+    setPopup(true);
   }
   return (
     <div className="App">
-      <button className="filter" onClick={()=>setPopup(!popup)}>Filter</button>
+      <button className="filter" onClick={show}>Filter</button>
       {
         popup ?<div className="popup">
       {

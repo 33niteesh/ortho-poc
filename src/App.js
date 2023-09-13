@@ -2,21 +2,19 @@ import './App.css';
 import {useState,useEffect} from "react";
 import ArrowDropDownTwoToneIcon from '@mui/icons-material/ArrowDropDownTwoTone';
 import ArrowDropUpTwoToneIcon from '@mui/icons-material/ArrowDropUpTwoTone';
-import axios from 'axios';
 import { connect } from "react-redux";
 import {  SortFn,SortId, SortLn,SortFnDEC,SortIdDEC, SortLnDEC ,getData} from "./actions/index";
-
 function App(props) {
   props.getData()
   const [data,setData]=useState();
   const [popup,setPopup]=useState(false);
+  const [searchdata,setSearch]=useState([]);
   const box = [
     {  label: "S", checked: false },
     {  label: "M", checked: false },
     {  label: "L", checked: false },
   ]
   const [final, setFinal] = useState(box);
-  const [newfruit,setNew]=useState();
   const setlist = (e) => {
     let label = e?.label;
     var checked = e?.checked;
@@ -49,62 +47,82 @@ function App(props) {
   const getDatafrom=()=>{
     const table = [
       {
-        "id":1,
-        "first_name":"Arjun",
-        "SIZE":"S",
-        "last_name":"Kapoor"
-    },
-    {
-        "id":2,
-        "first_name":"Rajesh",
-        "SIZE":"S",
-        "last_name":"Kumar"
-    },
-    {
-        "id":3,
-        "first_name":"Nithin",
-        "SIZE":"M",
-        "last_name":"Ghatkari"
-    },{
-        "id":4,
-        "first_name":"Ram",
-        "SIZE":"M",
-        "last_name":"Kaushik"
-    },{
-        "id":5,
-        "first_name":"Bipin",
-        "SIZE":"L",
-        "last_name":"Patel"
-    },{
-        "id":6,
-        "first_name":"Raju",
-        "SIZE":"M",
-        "last_name":"Singh"
-    },
-    {
-        "id":7,
-        "first_name":"Vickey",
-        "SIZE":"S",
-        "last_name":"Mudiraj"
-    },
-    {
-        "id":8,
-        "first_name":"Sai Kumar",
-        "SIZE":"L",
-        "last_name":"Naidu"
-    },
-    {
-        "id":9,
-        "first_name":"Madhu",
-        "SIZE":"M",
-        "last_name":"Roy"
-    },{
-        "id":10,
-        "first_name":"Jaishwal",
-        "SIZE":"L",
-        "last_name":"Harith"
-    }
-    ]
+          "id":1,
+          "first_name":"Arjun",
+          "SIZE":"S",
+          "last_name":"Kapoor",
+          "city":"Guntur",
+          "pincode":93244
+      },
+      {
+          "id":2,
+          "first_name":"Rajesh",
+          "SIZE":"S",
+          "last_name":"Kumar",
+          "city":"Chennai",
+          "pincode":934824
+      },
+      {
+          "id":3,
+          "first_name":"Nithin",
+          "SIZE":"M",
+          "last_name":"Ghatkari",
+          "city":"Pune",
+          "pincode":892434
+      },{
+          "id":4,
+          "first_name":"Ram",
+          "SIZE":"M",
+          "last_name":"Kaushik",
+          "city":"Mumbai",
+          "pincode":985235
+      },{
+          "id":5,
+          "first_name":"Bipin",
+          "SIZE":"L",
+          "last_name":"Patel",
+          "city":"Delhi",
+          "pincode":908234
+      },{
+          "id":6,
+          "first_name":"Raju",
+          "SIZE":"M",
+          "last_name":"Singh",
+          "city":"Kolkata",
+          "pincode":890032
+      },
+      {
+          "id":7,
+          "first_name":"Vickey",
+          "SIZE":"S",
+          "last_name":"Mudiraj",
+          "city":"Indore",
+          "pincode":100032
+      },
+      {
+          "id":8,
+          "first_name":"Sai Kumar",
+          "SIZE":"L",
+          "last_name":"Naidu",
+          "city":"Banglore",
+          "pincode":200032
+      },
+      {
+          "id":9,
+          "first_name":"Madhu",
+          "SIZE":"M",
+          "last_name":"Roy",
+          "city":"Hyderabad",
+          "pincode":500039
+      },{
+          "id":10,
+          "first_name":"Jaishwal",
+          "SIZE":"L",
+          "last_name":"Harith",
+          "city":"Hyderabad",
+          "pincode":500032
+      }
+  ]
     setData(table);
   }
   useEffect(()=>{
@@ -142,9 +160,23 @@ function App(props) {
     getDatafrom();
     setPopup(true);
   }
+  const search=(e)=>{
+    getDatafrom();
+    const search=data.filter((ele)=>ele.first_name.includes(e.target.value))
+    setSearch(search)
+
+  }
+  const searchresult=()=>{
+    setData(searchdata)
+  }
   return (
     <div className="App">
+      <nav><p>Niteesh Satyapu</p></nav>
+      <div className='division'>
+      <input className='searchbar' placeholder='search' onChange={(e)=>search(e)}></input>
+      <button className='filter-go' onClick={searchresult}> Go</button>
       <button className="filter" onClick={show}>Filter</button>
+      </div>
       {
         popup ?<div className="popup">
       {
@@ -170,6 +202,8 @@ function App(props) {
             <th><div className="sort"><p>First name</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyFn}/><ArrowDropDownTwoToneIcon onClick={sortbyFnDEC}/></div></div></th>
             <th><div className="sort"><p>Last name</p>  <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyLn}/><ArrowDropDownTwoToneIcon onClick={sortbyLnDEC}/></div></div></th>
             <th>SIZE</th>
+            <th>City</th>
+            <th>Pin</th>
         </tr>
         {data?.map((i,j)=>{
           return(
@@ -178,6 +212,8 @@ function App(props) {
               <td>{i?.first_name}</td>
               <td>{i?.last_name}</td>
               <td>{i?.SIZE}</td>
+              <td>{i?.city}</td>
+              <td>{i?.pincode}</td>
             </tr>
           )
         })

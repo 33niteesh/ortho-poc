@@ -59,11 +59,12 @@
     display:flex;
   }
   .sort-icons{
-    flex-direction: row;
-      display: flex;
-      justify-content: center;
-      align-self: center;
-      gap: 0px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 0px;
+    height: 7px;
   }
   .checkbox{
     margin: 200px;

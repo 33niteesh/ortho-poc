@@ -35,7 +35,7 @@ function App(props) {
     setFinal([...arr])
   }
   const done = () =>{
-        setFinal(box)
+    setFinal(box) 
     const array = []
     final.map(ele=>{
       if(ele.checked===true){
@@ -166,7 +166,6 @@ function App(props) {
     setPopup(false);
   }
   const show=()=>{
-    setFinal(box)
     getDatafrom();
     setPopup(true);
   }
@@ -181,7 +180,7 @@ function App(props) {
   }
   return (
     <div className="App">
-      <nav><p>Niteesh Satyapu   .</p></nav>
+      <nav><p>Niteesh Satyapu</p></nav>
       <div className='division'>
       <input className='searchbar' placeholder='search' onChange={(e)=>search(e)}></input>
       <button className='filter-go' onClick={searchresult}> Go</button>
@@ -204,15 +203,15 @@ function App(props) {
         </div>:<></>
       }
       <br></br>
-        <Table className='table' sx={{ maxWidth: 950,maxHeight:600 }}>
-          <TableHead className='th'>
-          <TableRow>
-            <TableCell className='td' sx={{padding:1,color: 'white'}}><div className="sort"><p>Si no</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyId}/><ArrowDropDownTwoToneIcon onClick={sortbyIdDEC}/></div></div></TableCell>
+        <Table className='table' sx={{ maxWidth: 950,maxHeight:600,borderRadius:5,border:0 }}>
+          <TableHead className='th'sx={{ borderRadius:5 }}>
+          <TableRow >
+            <TableCell className='td' sx={{padding:1,color: 'white',borderRadius:"20px 0px 0px 0px"}}><div className="sort"><p>Si no</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyId}/><ArrowDropDownTwoToneIcon onClick={sortbyIdDEC}/></div></div></TableCell>
             <TableCell className='td' sx={{padding:1,color: 'white'}}><div className="sort"><p>First name</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyFn}/><ArrowDropDownTwoToneIcon onClick={sortbyFnDEC}/></div></div></TableCell>
             <TableCell className='td' sx={{padding:1,color: 'white'}}><div className="sort"><p>Last name</p>  <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyLn}/><ArrowDropDownTwoToneIcon onClick={sortbyLnDEC}/></div></div></TableCell>
             <TableCell className='td' sx={{padding:1,color: 'white'}}>SIZE</TableCell>
             <TableCell className='td' sx={{padding:1,color: 'white'}}>City</TableCell>
-            <TableCell className='td' sx={{padding:1,color: 'white'}}>Pin</TableCell>
+            <TableCell className='td' sx={{padding:1,color: 'white',borderRadius:"0px 20px 0px 0px"}}>Pin</TableCell>
         </TableRow>
           </TableHead>
           <TableBody>

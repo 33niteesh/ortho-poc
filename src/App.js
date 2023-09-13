@@ -35,6 +35,7 @@ function App(props) {
     setFinal([...arr])
   }
   const done = () =>{
+        setFinal(box)
     const array = []
     final.map(ele=>{
       if(ele.checked===true){

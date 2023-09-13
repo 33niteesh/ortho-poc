@@ -162,7 +162,7 @@ function App(props) {
   }
   const search=(e)=>{
     getDatafrom();
-    const search=data.filter((ele)=>ele.first_name.includes(e.target.value))
+    const search=data.filter((ele)=>ele.first_name.toLowerCase().includes(e.target.value)||ele.last_name.toLowerCase().includes(e.target.value))
     setSearch(search)
 
   }

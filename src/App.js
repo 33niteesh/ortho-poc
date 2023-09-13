@@ -166,6 +166,7 @@ function App(props) {
     setPopup(false);
   }
   const show=()=>{
+    setFinal(box)
     getDatafrom();
     setPopup(true);
   }

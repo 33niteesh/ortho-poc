@@ -181,7 +181,7 @@ function App(props) {
   }
   return (
     <div className="App">
-      <nav><p>Niteesh Satyapu</p></nav>
+      <nav><p>Niteesh Satyapu   .</p></nav>
       <div className='division'>
       <input className='searchbar' placeholder='search' onChange={(e)=>search(e)}></input>
       <button className='filter-go' onClick={searchresult}> Go</button>

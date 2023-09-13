@@ -59,7 +59,7 @@
     display:flex;
   }
   .sort-icons{
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
     justify-content: center;
     align-self: center;

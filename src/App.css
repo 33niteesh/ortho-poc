@@ -1,114 +1,117 @@
-.MuiTable-root{
-  border: 1px rgb(81, 80, 80) solid;
-  border-radius:5px;
-  background:rgba(136, 130, 130, 0.288);
-  width: 80%;
-}
-.filter-btn{
-  background:red;
-  border:none;
-  color:white;
-  font-size:medium;
-  padding:10px 60px;
-  margin:20px;
-  border-radius:5px;
-}
-.popup{
-  z-index:999;
-  width:300px;
-  height:300px;
-  border-radius: 5px;
-  margin-top:-135px ;
-  margin-left:700px;
-  background:rgba(255, 255, 255, 1);
-  position:fixed;
-  border:1px solid grey;
-}
-.date{
-  padding:20px;
-  margin:20px;
-}
-p{
-  padding:0px;
-  margin: 1px;
-}
-.th{
-  background:rgba(255, 0, 0, 0.735);
-  padding: 0 40px ;
-  color:rgb(255, 255, 255);
-  height:10px;
-}
+  .MuiTable-root{
+    border: 1px rgb(81, 80, 80) solid;
+    border-radius:5px;
+    background:rgba(136, 130, 130, 0.288);
+    width: 80%;
+  }
+  .filter-btn{
+    background:red;
+    border:none;
+    color:white;
+    font-size:medium;
+    padding:10px 60px;
+    margin:20px;
+    border-radius:5px;
+  }
+  .main{
+    margin: 4px;
+  }
+  .popup{
+    z-index: 999;
+    width: 257px;
+    height: 238px;
+    border-radius: 5px;
+    margin-top: -95px;
+    margin-left: 650px;
+    background: rgba(255, 255, 255, 1);
+    position: fixed;
+    border: 1px solid grey;
+  }
+  .date{
+    padding:20px;
+    margin:20px;
+  }
+  p{
+    padding:0px;
+    margin: 1px;
+  }
+  .th{
+    background:rgba(255, 0, 0, 0.735);
+    padding: 0 40px ;
+    color:rgb(255, 255, 255);
+    height:10px;
+  }
 
-.App{
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-.td{
-  padding:10px 50px;
-  margin:0px  ;
-  color:rgba(255, 3, 3, 0.71) 
-}
-.sort{
-  display:flex;
-}
-.sort-icons{
-  flex-direction: row;
-    display: flex;
+  .App{
+    text-align: center;
     justify-content: center;
-    align-self: center;
-    gap: 0px;
-}
-.checkbox{
-  margin: 200px;
-}
-nav{
-  width: 100%;
-  background-color: red;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  color: aliceblue;
-  font-size: larger;
-  align-items: center;
-  margin-top: -550px;
-  align-self: first baseline;
-  justify-content: center;
-  position: fixed;
-  margin-left: 0px;
-}
-p{
-  align-self: end;
-  justify-self: center;
-}
-.division{
-  margin-top: 60px;
-}
-.filter-go{
-  background-color: rgb(255, 255, 255);
-  border: none;
-  padding: 10px;
-  color: red;
-}
-body{
-  padding: 0px;
-  margin: 0px;
-}
-.filter{
-  padding:5px 10px;
-  background:red;
-  font-size:medium;  
-  color:white;
-  border:none;
-  margin-left:600px;
-  border-radius:5px
-}
-.searchbar{
-  border-radius: 10px;
-  border: 1px solid red;
-  color: red;
-  padding: 5px 20px;
-}
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .td{
+    padding:10px 50px;
+    margin:0px  ;
+    color:rgba(255, 3, 3, 0.71) 
+  }
+  .sort{
+    display:flex;
+  }
+  .sort-icons{
+    flex-direction: row;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      gap: 0px;
+  }
+  .checkbox{
+    margin: 200px;
+  }
+  nav{
+    width: 100%;
+    background-color: red;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: larger;
+    align-items: center;
+    margin-top: -550px;
+    align-self: first baseline;
+    justify-content: center;
+    position: fixed;
+    margin-left: 0px;
+  }
+  p{
+    align-self: end;
+    justify-self: center;
+  }
+  .division{
+    margin-top: 60px;
+  }
+  .filter-go{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    color: red;
+  }
+  body{
+    padding: 0px;
+    margin: 0px;
+  }
+  .filter{
+    padding:5px 10px;
+    background:red;
+    font-size:medium;  
+    color:white;
+    border:none;
+    margin-left:600px;
+    border-radius:5px
+  }
+  .searchbar{
+    border-radius: 10px;
+    border: 1px solid red;
+    color: red;
+    padding: 5px 20px;
+  }

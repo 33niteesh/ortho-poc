@@ -18,7 +18,7 @@ table {
   height:300px;
   border-radius: 5px;
   margin-top:-135px ;
-  margin-left:350px;
+  margin-left:700px;
   background:rgba(255, 255, 255, 1);
   position:fixed;
   border:1px solid grey;
@@ -60,8 +60,38 @@ td{
     align-self: center;
     gap: 0px;
 }
-svg{
-  height:10px
+nav{
+  width: 100%;
+  background-color: red;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  font-size: larger;
+  align-items: center;
+  margin-top: -525px;
+  align-self: first baseline;
+  justify-content: center;
+  position: fixed;
+  margin-left: 0px;
+}
+p{
+  align-self: end;
+  margin: 20px;
+  justify-self: center;
+}
+.division{
+  margin-top: 60px;
+}
+.filter-go{
+  background-color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  color: red;
+}
+body{
+  padding: 0px;
+  margin: 0px;
 }
 .filter{
   padding:5px 10px;
@@ -69,6 +99,12 @@ svg{
   font-size:medium;  
   color:white;
   border:none;
-  margin-left:550px;
+  margin-left:600px;
   border-radius:5px
+}
+.searchbar{
+  border-radius: 10px;
+  border: 1px solid red;
+  color: red;
+  padding: 5px 20px;
 }

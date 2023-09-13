@@ -3,6 +3,14 @@ import {useState,useEffect} from "react";
 import ArrowDropDownTwoToneIcon from '@mui/icons-material/ArrowDropDownTwoTone';
 import ArrowDropUpTwoToneIcon from '@mui/icons-material/ArrowDropUpTwoTone';
 import { connect } from "react-redux";
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 import {  SortFn,SortId, SortLn,SortFnDEC,SortIdDEC, SortLnDEC ,getData} from "./actions/index";
 function App(props) {
   props.getData()
@@ -183,7 +191,7 @@ function App(props) {
         final?.map((checkbox,key) => {
           return (
             <p className="main" key={key}>
-              <input type="checkbox" checked={checkbox.checked} className={checkbox.checked ? "input":"noinput"} onChange={() => setlist(checkbox)}  /><label className="label">{!checkbox.checked ? checkbox.label : <s>{checkbox.label}</s>}</label>
+              <input type="checkbox" className="checkbox" checked={checkbox.checked} className={checkbox.checked ? "input":"noinput"} onChange={() => setlist(checkbox)}  /><label className="label">{!checkbox.checked ? checkbox.label : <s>{checkbox.label}</s>}</label>
             </p>
           )
         })
@@ -194,32 +202,33 @@ function App(props) {
         </div>:<></>
       }
       <br></br>
-        <table>
-          <thead></thead>
-          <tbody>
-        <tr>
-            <th><div className="sort"><p>Si no</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyId}/><ArrowDropDownTwoToneIcon onClick={sortbyIdDEC}/></div></div></th>
-            <th><div className="sort"><p>First name</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyFn}/><ArrowDropDownTwoToneIcon onClick={sortbyFnDEC}/></div></div></th>
-            <th><div className="sort"><p>Last name</p>  <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyLn}/><ArrowDropDownTwoToneIcon onClick={sortbyLnDEC}/></div></div></th>
-            <th>SIZE</th>
-            <th>City</th>
-            <th>Pin</th>
-        </tr>
+        <Table className='table' sx={{ maxWidth: 950,maxHeight:600 }}>
+          <TableHead className='th'>
+          <TableRow>
+            <TableCell className='td' sx={{padding:1}}><div className="sort"><p>Si no</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyId}/><ArrowDropDownTwoToneIcon onClick={sortbyIdDEC}/></div></div></TableCell>
+            <TableCell className='td' sx={{padding:1}}><div className="sort"><p>First name</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyFn}/><ArrowDropDownTwoToneIcon onClick={sortbyFnDEC}/></div></div></TableCell>
+            <TableCell className='td' sx={{padding:1}}><div className="sort"><p>Last name</p>  <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyLn}/><ArrowDropDownTwoToneIcon onClick={sortbyLnDEC}/></div></div></TableCell>
+            <TableCell className='td' sx={{padding:1}}>SIZE</TableCell>
+            <TableCell className='td' sx={{padding:1}}>City</TableCell>
+            <TableCell className='td' sx={{padding:1}}>Pin</TableCell>
+        </TableRow>
+          </TableHead>
+          <TableBody>
         {data?.map((i,j)=>{
           return(
-            <tr key={i?.id}>
-              <td>{i?.id}</td>
-              <td>{i?.first_name}</td>
-              <td>{i?.last_name}</td>
-              <td>{i?.SIZE}</td>
-              <td>{i?.city}</td>
-              <td>{i?.pincode}</td>
-            </tr>
+            <TableRow key={i?.id}>
+              <TableCell className='td' sx={{padding:1}}>{i?.id}</TableCell>
+              <TableCell className='td' sx={{padding:1}}>{i?.first_name}</TableCell>
+              <TableCell className='td' sx={{padding:1}}>{i?.last_name}</TableCell>
+              <TableCell className='td' sx={{padding:1}}>{i?.SIZE}</TableCell>
+              <TableCell className='td' sx={{padding:1}}>{i?.city}</TableCell>
+              <TableCell className='td' sx={{padding:1}}>{i?.pincode}</TableCell>
+            </TableRow>
           )
         })
         }
-        </tbody>
-    </table>
+        </TableBody>
+    </Table>
     </div>
   );
 }

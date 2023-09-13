@@ -1,7 +1,8 @@
-table {
+.MuiTable-root{
   border: 1px rgb(81, 80, 80) solid;
   border-radius:5px;
   background:rgba(136, 130, 130, 0.288);
+  width: 80%;
 }
 .filter-btn{
   background:red;
@@ -28,13 +29,14 @@ table {
   margin:20px;
 }
 p{
-  padding:0px
+  padding:0px;
+  margin: 1px;
 }
-th{
+.th{
   background:rgba(255, 0, 0, 0.735);
   padding: 0 40px ;
   color:rgb(255, 255, 255);
-  height:40px;
+  height:10px;
 }
 
 .App{
@@ -45,7 +47,7 @@ th{
   flex-direction: column;
   height: 100vh;
 }
-td{
+.td{
   padding:10px 50px;
   margin:0px  ;
   color:rgba(255, 3, 3, 0.71) 
@@ -59,6 +61,9 @@ td{
     justify-content: center;
     align-self: center;
     gap: 0px;
+}
+.checkbox{
+  margin: 200px;
 }
 nav{
   width: 100%;
@@ -77,7 +82,6 @@ nav{
 }
 p{
   align-self: end;
-  margin: 20px;
   justify-self: center;
 }
 .division{

@@ -207,12 +207,12 @@ function App(props) {
         <Table className='table' sx={{ maxWidth: 950,maxHeight:600 }}>
           <TableHead className='th'>
           <TableRow>
-            <TableCell className='td' sx={{padding:1}}><div className="sort"><p>Si no</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyId}/><ArrowDropDownTwoToneIcon onClick={sortbyIdDEC}/></div></div></TableCell>
-            <TableCell className='td' sx={{padding:1}}><div className="sort"><p>First name</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyFn}/><ArrowDropDownTwoToneIcon onClick={sortbyFnDEC}/></div></div></TableCell>
-            <TableCell className='td' sx={{padding:1}}><div className="sort"><p>Last name</p>  <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyLn}/><ArrowDropDownTwoToneIcon onClick={sortbyLnDEC}/></div></div></TableCell>
-            <TableCell className='td' sx={{padding:1}}>SIZE</TableCell>
-            <TableCell className='td' sx={{padding:1}}>City</TableCell>
-            <TableCell className='td' sx={{padding:1}}>Pin</TableCell>
+            <TableCell className='td' sx={{padding:1,color: 'white'}}><div className="sort"><p>Si no</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyId}/><ArrowDropDownTwoToneIcon onClick={sortbyIdDEC}/></div></div></TableCell>
+            <TableCell className='td' sx={{padding:1,color: 'white'}}><div className="sort"><p>First name</p> <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyFn}/><ArrowDropDownTwoToneIcon onClick={sortbyFnDEC}/></div></div></TableCell>
+            <TableCell className='td' sx={{padding:1,color: 'white'}}><div className="sort"><p>Last name</p>  <div className="sort-icons"><ArrowDropUpTwoToneIcon onClick={sortbyLn}/><ArrowDropDownTwoToneIcon onClick={sortbyLnDEC}/></div></div></TableCell>
+            <TableCell className='td' sx={{padding:1,color: 'white'}}>SIZE</TableCell>
+            <TableCell className='td' sx={{padding:1,color: 'white'}}>City</TableCell>
+            <TableCell className='td' sx={{padding:1,color: 'white'}}>Pin</TableCell>
         </TableRow>
           </TableHead>
           <TableBody>
